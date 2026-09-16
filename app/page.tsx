@@ -1,4 +1,4 @@
-const STRIPE_LINK = "https://buy.stripe.com/test_aFadRa1iPcTI9lk8Uv14400";
+const STRIPE_LINK = "https://buy.stripe.com/aFadRa1iPcTI9lk8Uv14400";
 
 const categories = [
   "Parties & Entertainment",
