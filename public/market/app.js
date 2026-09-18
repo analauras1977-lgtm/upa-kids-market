@@ -93,7 +93,6 @@ function submitSeller(e){
   document.getElementById('formMsg').textContent=ui('formOpening');
   window.location.href=`mailto:info@upaentertainment.com?subject=${subject}&body=${body}`
 }
-renderBusinesses();
 
 let currentLang='en';
 const translations={
