@@ -88,7 +88,7 @@ export default function SuccessPage() {
         <div style={{textAlign:'center',marginBottom:28}}>
           <div style={{fontSize:48}}>✓</div>
           <h1 style={{fontSize:36,margin:'6px 0 10px',color:'#172033'}}>Payment received</h1>
-          <p style={{fontSize:17,lineHeight:1.6,color:'#687180',maxWidth:650,margin:'0 auto'}}>Thank you for joining UPA Kids Market. Complete your seller profile below so we can review and publish your business.</p>
+          <p style={{fontSize:17,lineHeight:1.6,color:'#687180',maxWidth:650,margin:'0 auto'}}>Thank you for joining UPA Kids Market. Your $5 launch registration covers 12 months. Complete your seller profile below so we can review and publish your business.</p>
         </div>
 
         <form onSubmit={handleSubmit} style={{display:'grid',gap:18}}>
