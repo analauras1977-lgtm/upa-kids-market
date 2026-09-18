@@ -1,30 +1,129 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>UPA Kids Market | Todo para su mundo</title>
-  <meta name="description" content="Productos, servicios, actividades y experiencias para chicos y familias, en un solo lugar." />
+  <title>UPA Kids Market | Everything for their world</title>
+  <meta name="description" content="Products, services, activities and experiences for kids and families, all in one place." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="launchbar">🚀 Lanzamiento para vendedores hasta el 18 de septiembre: <strong>USD 5 por 12 meses · 0% comisión por venta</strong></header>
+<header class="launchbar" data-i18n="launch">🚀 Seller launch offer through September 18: <strong>USD 5 for 12 months · 0% sales commission</strong></header>
 <nav class="nav wrap">
   <a class="brand" href="#top"><span class="brand-main">UPA</span><span class="brand-sub">KIDS MARKET</span></a>
-  <div class="search"><input id="searchInput" placeholder="Buscar productos y servicios"/><button onclick="runSearch()">Buscar</button></div>
-  <div class="navlinks"><a href="#businesses">Explorar</a><a href="#sell">Vendé en UPA</a><a href="#advertising">Publicidad</a><a href="#">EN</a></div>
+  <div class="search"><input id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Search products and services"/><button onclick="runSearch()" data-i18n="search">Search</button></div>
+  <div class="navlinks">
+    <a href="#businesses" data-i18n="explore">Explore</a>
+    <a href="#sell" data-i18n="sellAtUpa">Sell on UPA</a>
+    <a href="#advertising" data-i18n="advertising">Advertising</a>
+    <div class="language-switcher" aria-label="Language">
+      <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')" title="English">🇺🇸 <span>EN</span></button>
+      <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" title="Español">🇪🇸 <span>ES</span></button>
+      <button type="button" class="lang-btn" data-lang="he" onclick="setLanguage('he')" title="עברית">🇮🇱 <span>HE</span></button>
+    </div>
+  </div>
 </nav>
-<div class="category-nav"><div class="wrap chips"><a href="#businesses">Todo</a><a href="#categories">Experiencias</a><a href="#categories">Fiestas</a><a href="#categories">Juguetes</a><a href="#categories">Deportes</a><a href="#categories">Cuidado</a><a href="#categories">Creatividad</a><a href="#categories">Educación</a><a href="#categories">Salud y bienestar</a><a href="#categories">Planes en familia</a></div></div>
+<div class="mobile-language wrap">
+  <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')">🇺🇸 English</button>
+  <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')">🇪🇸 Español</button>
+  <button type="button" class="lang-btn" data-lang="he" onclick="setLanguage('he')">🇮🇱 עברית</button>
+</div>
+<div class="category-nav"><div class="wrap chips">
+  <a href="#businesses" data-i18n="all">All</a><a href="#categories" data-i18n="experiences">Experiences</a><a href="#categories" data-i18n="parties">Parties</a><a href="#categories" data-i18n="toys">Toys</a><a href="#categories" data-i18n="sports">Sports</a><a href="#categories" data-i18n="care">Care</a><a href="#categories" data-i18n="creativity">Creativity</a><a href="#categories" data-i18n="education">Education</a><a href="#categories" data-i18n="wellness">Health & Wellness</a><a href="#categories" data-i18n="familyPlans">Family Plans</a>
+</div></div>
+
 <main id="top">
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow">TODO PARA SU MUNDO</div><h1>Productos y experiencias que los chicos aman.</h1><p>Descubrí negocios, compará propuestas y contactá servicios para chicos y familias en un solo lugar, con el respaldo de UPA Entertainment.</p><div class="hero-actions"><a class="btn primary" href="#businesses">Explorar el market</a></div><div class="location">📍 Miami-Dade</div><div class="trust"><span>✓ Selección UPA</span><span>✓ Negocios identificados</span><span>✓ Ayuda real</span></div></div><div class="hero-visual"><div class="visual-main"><span class="visual-emoji">🎈</span><div><b>Todo lo que necesitan.</b><small>Productos + servicios + experiencias</small></div></div><div class="float-card rating">⭐ <strong>4.9/5</strong><span>Familias felices</span></div><div class="float-card quick">⚡ <strong>Contacto directo</strong><span>Productos + servicios</span></div><div class="visual-bubbles"><span>⚽</span><span>🎨</span><span>🧸</span><span>🎂</span></div></div></div></section>
-<section id="categories" class="section wrap category-section"><div class="category-cards"><article><span>🎟️</span><b>Experiencias</b><small>Para recordar</small></article><article><span>🎉</span><b>Fiestas</b><small>Todo resuelto</small></article><article><span>⚽</span><b>Deportes</b><small>Clases y kits</small></article><article><span>🎨</span><b>Creatividad</b><small>Manos a la obra</small></article><article><span>🧸</span><b>Cuidado</b><small>Con confianza</small></article><article><span>📚</span><b>Educación</b><small>Aprender jugando</small></article><article><span>💚</span><b>Bienestar</b><small>Crecer saludables</small></article><article><span>🌴</span><b>Planes</b><small>Para toda la familia</small></article></div></section>
-<section class="section featured-bg"><div class="wrap"><div class="section-title"><span>DESTACADOS</span><h2>UPA Soluciones para cada momento</h2><p>Servicios propios y propuestas de la familia UPA.</p></div><div class="upa-grid"><a href="https://babysittingupa.com" target="_blank"><small>CUIDADO CON CONFIANZA</small><h3>UPA Care</h3><p>Encontrá caregivers y babysitters para tu familia.</p><b>Conocer UPA Care →</b></a><a href="https://upaentertainment.com" target="_blank"><small>EVENTOS PARA CHICOS</small><h3>UPA Entertainment</h3><p>Animación, fiestas, clases y diversión completa.</p><b>Ver servicios →</b></a><a href="https://upaevents.com" target="_blank"><small>EVENTOS SOCIALES Y CORPORATIVOS</small><h3>UPA Events</h3><p>Producción, shows y experiencias para celebrar en grande.</p><b>Descubrir UPA Events →</b></a><a href="https://babysittingupa.com" target="_blank"><small>BABYSITTING PROFESIONAL</small><h3>Babysitting UPA</h3><p>Cuidado flexible para hogares, hoteles, viajes y eventos.</p><b>Solicitar babysitter →</b></a></div></div></section>
-<section id="businesses" class="section wrap"><div class="market-head"><div><span class="kicker">ELEGIDOS PARA VOS</span><h2>Lo mejor de UPA Kids</h2><p class="muted">Negocios y servicios reales para familias.</p></div><div class="market-controls"><span id="resultCount">17 resultados</span><select id="filter" onchange="renderBusinesses()"><option value="all">Todos</option></select></div></div><div class="ad-banner" id="advertising"><div><span>PUBLICIDAD ↗</span><h3>Tu marca puede estar acá</h3><p>Llegá a familias que ya están buscando productos y servicios para sus chicos.</p></div><a href="mailto:info@upaentertainment.com?subject=UPA%20Kids%20Market%20Advertising">Ver espacios</a></div><div class="product-grid" id="businessGrid"></div><p class="muted" style="margin-top:18px">Los listados marcados como “Public Listing” usan información pública del negocio y no implican afiliación, patrocinio ni verificación comercial por UPA. Precios y disponibilidad pueden cambiar; confirmalos directamente con el proveedor.</p></section>
-<section class="section shops-bg"><div class="wrap"><div class="section-title row"><div><span>TIENDAS DESTACADAS</span><h2>Marcas y profesionales para tu familia</h2></div><a href="#sell">Quiero aparecer acá →</a></div><div class="shop-highlight-grid"><article class="shop-card official"><span>UPA · TIENDA OFICIAL</span><h3>UPA Entertainment</h3><p>Fiestas, deportes, experiencias y servicios.</p><b>✓ Oficial UPA →</b></article><article class="shop-card"><span>⚽ SPORTS & CAMPS</span><h3>Negocios locales</h3><p>Clases, camps y actividades para todas las edades.</p><b>Explorar →</b></article><article class="shop-card sponsored"><span>PATROCINADO · PARTY SERVICES</span><h3>Tu empresa puede estar acá</h3><p>Un espacio premium frente a familias listas para comprar.</p><b>Ver opciones de publicidad →</b></article></div></div></section>
-<section class="world-section"><div class="wrap world-grid"><div><span class="kicker light">MUCHO MÁS QUE UNA TIENDA</span><h2>Todo el mundo de los chicos, en un solo portal.</h2><p>Productos, profesionales, clases, campamentos, cumpleaños, cuidado, salud, educación y planes para compartir en familia.</p></div><div class="world-icons"><span>🛍️ Productos</span><span>🎂 Cumpleaños</span><span>🏕️ Camps</span><span>👩‍🏫 Profesionales</span><span>🎟️ Entradas</span><span>👨‍👩‍👧‍👦 Familia</span></div></div></section>
-<section id="sell" class="section seller-wrap"><div class="wrap seller-grid"><div class="seller-copy"><span class="kicker">PARA EMPRESAS Y PROFESIONALES</span><h2>Vendé más. Llegá a más familias.</h2><p>Sumá tu negocio al marketplace o ganá visibilidad con publicidad para familias.</p><div class="seller-options"><div><span>🏪 MARKETPLACE</span><h3>Quiero vender</h3><strong>$5 por 12 meses durante el lanzamiento</strong><p>Publicá productos, clases, experiencias o servicios. Sin comisiones durante el período promocional.</p></div><div><span>📣 PUBLICIDAD</span><h3>Quiero destacar mi marca</h3><p>Comprá banners, categorías patrocinadas o posiciones destacadas para tus publicaciones.</p></div></div></div><form id="sellerForm" class="seller-form" onsubmit="submitSeller(event)"><h3>Sumá tu negocio</h3><label>Nombre del negocio<input required name="business" /></label><div class="two"><label>Nombre de contacto<input required name="name" /></label><label>Email<input required type="email" name="email" /></label></div><div class="two"><label>Teléfono<input name="phone" /></label><label>Ciudad / Estado<input name="location" /></label></div><label>Categoría<select name="category"><option>Toys & Shopping</option><option>Parties & Events</option><option>Classes & Camps</option><option>Childcare</option><option>Kids Fashion</option><option>Family Services</option><option>Food & Treats</option></select></label><label>Web / Instagram<input name="web" /></label><label>¿Qué vendés u ofrecés?<textarea required name="offer" rows="4"></textarea></label><button class="btn primary full">Enviar solicitud</button><p id="formMsg" class="form-msg"></p></form></div></section>
-<section class="trust-section"><div class="wrap trust-grid"><div><b>🛡️ Negocios identificados</b><p>Distinguimos claramente los negocios UPA de los listados del directorio.</p></div><div><b>💬 Soporte humano</b><p>Personas reales para ayudarte durante el proceso.</p></div><div><b>✨ 25+ años creando alegría</b><p>La experiencia de UPA ahora también en un marketplace.</p></div></div></section>
-<footer><div class="wrap footer-grid"><div><div class="brand"><span class="brand-main">UPA</span><span class="brand-sub">KIDS MARKET</span></div><p>Una nueva forma de encontrar todo lo que tus chicos necesitan.</p></div><div><b>UPA</b><a href="https://upaentertainment.com">UPA Entertainment</a><a href="https://upaevents.com">UPA Events</a><a href="https://babysittingupa.com">UPA Care</a></div><div><b>Legal</b></div></div></footer>
+<section class="hero"><div class="wrap hero-grid">
+  <div class="hero-copy">
+    <div class="eyebrow" data-i18n="eyebrow">EVERYTHING FOR THEIR WORLD</div>
+    <h1 data-i18n="heroTitle">Products and experiences kids love.</h1>
+    <p data-i18n="heroText">Discover businesses, compare offers and contact services for kids and families in one place, backed by UPA Entertainment.</p>
+    <div class="hero-actions"><a class="btn primary" href="#businesses" data-i18n="exploreMarket">Explore the market</a></div>
+    <div class="location">📍 Miami-Dade</div>
+    <div class="trust"><span data-i18n="upaSelection">✓ UPA Selection</span><span data-i18n="identifiedBusinesses">✓ Identified businesses</span><span data-i18n="realHelp">✓ Real help</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-main"><span class="visual-emoji">🎈</span><div><b data-i18n="everythingNeed">Everything they need.</b><small data-i18n="productsServicesExperiences">Products + services + experiences</small></div></div>
+    <div class="float-card rating">⭐ <strong>4.9/5</strong><span data-i18n="happyFamilies">Happy families</span></div>
+    <div class="float-card quick">⚡ <strong data-i18n="directContact">Direct contact</strong><span data-i18n="productsServices">Products + services</span></div>
+    <div class="visual-bubbles"><span>⚽</span><span>🎨</span><span>🧸</span><span>🎂</span></div>
+  </div>
+</div></section>
+
+<section id="categories" class="section wrap category-section"><div class="category-cards">
+  <article><span>🎟️</span><b data-i18n="experiences">Experiences</b><small data-i18n="toRemember">To remember</small></article>
+  <article><span>🎉</span><b data-i18n="parties">Parties</b><small data-i18n="everythingSolved">Everything handled</small></article>
+  <article><span>⚽</span><b data-i18n="sports">Sports</b><small data-i18n="classesKits">Classes & kits</small></article>
+  <article><span>🎨</span><b data-i18n="creativity">Creativity</b><small data-i18n="handsOn">Hands on</small></article>
+  <article><span>🧸</span><b data-i18n="care">Care</b><small data-i18n="withConfidence">With confidence</small></article>
+  <article><span>📚</span><b data-i18n="education">Education</b><small data-i18n="learnPlaying">Learn through play</small></article>
+  <article><span>💚</span><b data-i18n="wellnessShort">Wellness</b><small data-i18n="growHealthy">Grow healthy</small></article>
+  <article><span>🌴</span><b data-i18n="plans">Plans</b><small data-i18n="wholeFamily">For the whole family</small></article>
+</div></section>
+
+<section class="section featured-bg"><div class="wrap">
+  <div class="section-title"><span data-i18n="featured">FEATURED</span><h2 data-i18n="upaSolutions">UPA solutions for every moment</h2><p data-i18n="upaFamilyServices">Our own services and proposals from the UPA family.</p></div>
+  <div class="upa-grid">
+    <a href="https://babysittingupa.com" target="_blank"><small data-i18n="careWithTrust">CARE WITH CONFIDENCE</small><h3>UPA Care</h3><p data-i18n="upaCareText">Find caregivers and babysitters for your family.</p><b data-i18n="learnUpaCare">Explore UPA Care →</b></a>
+    <a href="https://upaentertainment.com" target="_blank"><small data-i18n="kidsEvents">KIDS EVENTS</small><h3>UPA Entertainment</h3><p data-i18n="upaEntertainmentText">Entertainment, parties, classes and complete fun.</p><b data-i18n="viewServices">View services →</b></a>
+    <a href="https://upaevents.com" target="_blank"><small data-i18n="socialCorporateEvents">SOCIAL & CORPORATE EVENTS</small><h3>UPA Events</h3><p data-i18n="upaEventsText">Production, shows and experiences for big celebrations.</p><b data-i18n="discoverUpaEvents">Discover UPA Events →</b></a>
+    <a href="https://babysittingupa.com" target="_blank"><small data-i18n="professionalBabysitting">PROFESSIONAL BABYSITTING</small><h3>Babysitting UPA</h3><p data-i18n="babysittingText">Flexible childcare for homes, hotels, travel and events.</p><b data-i18n="requestBabysitter">Request a babysitter →</b></a>
+  </div>
+</div></section>
+
+<section id="businesses" class="section wrap">
+  <div class="market-head"><div><span class="kicker" data-i18n="pickedForYou">PICKED FOR YOU</span><h2 data-i18n="bestUpaKids">The best of UPA Kids</h2><p class="muted" data-i18n="realBusinesses">Real businesses and services for families.</p></div>
+  <div class="market-controls"><span id="resultCount">17 results</span><select id="filter" onchange="renderBusinesses()"><option value="all">All</option></select></div></div>
+  <div class="ad-banner" id="advertising"><div><span data-i18n="advertisingArrow">ADVERTISING ↗</span><h3 data-i18n="brandHere">Your brand can be here</h3><p data-i18n="reachFamilies">Reach families already searching for kids products and services.</p></div><a href="mailto:info@upaentertainment.com?subject=UPA%20Kids%20Market%20Advertising" data-i18n="viewAdSpaces">View ad spaces</a></div>
+  <div class="product-grid" id="businessGrid"></div>
+  <p class="muted" style="margin-top:18px" data-i18n="listingDisclaimer">Listings marked “Public Listing” use publicly available business information and do not imply affiliation, sponsorship or commercial verification by UPA. Prices and availability may change; confirm directly with the provider.</p>
+</section>
+
+<section class="section shops-bg"><div class="wrap">
+  <div class="section-title row"><div><span data-i18n="featuredShops">FEATURED SHOPS</span><h2 data-i18n="brandsProfessionals">Brands and professionals for your family</h2></div><a href="#sell" data-i18n="appearHere">I want to appear here →</a></div>
+  <div class="shop-highlight-grid">
+    <article class="shop-card official"><span data-i18n="upaOfficialShop">UPA · OFFICIAL SHOP</span><h3>UPA Entertainment</h3><p data-i18n="partiesSportsExperiences">Parties, sports, experiences and services.</p><b data-i18n="officialUpa">✓ Official UPA →</b></article>
+    <article class="shop-card"><span>⚽ SPORTS & CAMPS</span><h3 data-i18n="localBusinesses">Local businesses</h3><p data-i18n="classesCampsActivities">Classes, camps and activities for all ages.</p><b data-i18n="exploreArrow">Explore →</b></article>
+    <article class="shop-card sponsored"><span data-i18n="sponsoredParty">SPONSORED · PARTY SERVICES</span><h3 data-i18n="companyHere">Your company can be here</h3><p data-i18n="premiumSpace">A premium space in front of families ready to buy.</p><b data-i18n="viewAdvertising">View advertising options →</b></article>
+  </div>
+</div></section>
+
+<section class="world-section"><div class="wrap world-grid">
+  <div><span class="kicker light" data-i18n="moreThanStore">MUCH MORE THAN A STORE</span><h2 data-i18n="wholeKidsWorld">The whole world of kids, in one portal.</h2><p data-i18n="worldText">Products, professionals, classes, camps, birthdays, care, health, education and family plans.</p></div>
+  <div class="world-icons"><span data-i18n="productsIcon">🛍️ Products</span><span data-i18n="birthdaysIcon">🎂 Birthdays</span><span>🏕️ Camps</span><span data-i18n="professionalsIcon">👩‍🏫 Professionals</span><span data-i18n="ticketsIcon">🎟️ Tickets</span><span data-i18n="familyIcon">👨‍👩‍👧‍👦 Family</span></div>
+</div></section>
+
+<section id="sell" class="section seller-wrap"><div class="wrap seller-grid">
+  <div class="seller-copy"><span class="kicker" data-i18n="forBusinesses">FOR BUSINESSES & PROFESSIONALS</span><h2 data-i18n="sellMore">Sell more. Reach more families.</h2><p data-i18n="joinMarketplace">Add your business to the marketplace or gain visibility with advertising for families.</p>
+    <div class="seller-options">
+      <div><span>🏪 MARKETPLACE</span><h3 data-i18n="wantSell">I want to sell</h3><strong data-i18n="launchPrice">$5 for 12 months during launch</strong><p data-i18n="publishOffer">Publish products, classes, experiences or services. No sales commission during the promotional period.</p></div>
+      <div><span data-i18n="advertisingEmoji">📣 ADVERTISING</span><h3 data-i18n="highlightBrand">I want to highlight my brand</h3><p data-i18n="buyAds">Buy banners, sponsored categories or featured positions for your listings.</p></div>
+    </div>
+  </div>
+  <form id="sellerForm" class="seller-form" onsubmit="submitSeller(event)">
+    <h3 data-i18n="addBusiness">Add your business</h3>
+    <label><span data-i18n="businessName">Business name</span><input required name="business" /></label>
+    <div class="two"><label><span data-i18n="contactName">Contact name</span><input required name="name" /></label><label>Email<input required type="email" name="email" /></label></div>
+    <div class="two"><label><span data-i18n="phone">Phone</span><input name="phone" /></label><label><span data-i18n="cityState">City / State</span><input name="location" /></label></div>
+    <label><span data-i18n="category">Category</span><select name="category"><option>Toys & Shopping</option><option>Parties & Events</option><option>Classes & Camps</option><option>Childcare</option><option>Kids Fashion</option><option>Family Services</option><option>Food & Treats</option></select></label>
+    <label>Website / Instagram<input name="web" /></label>
+    <label><span data-i18n="whatOffer">What do you sell or offer?</span><textarea required name="offer" rows="4"></textarea></label>
+    <button class="btn primary full" data-i18n="sendApplication">Send application</button><p id="formMsg" class="form-msg"></p>
+  </form>
+</div></section>
+
+<section class="trust-section"><div class="wrap trust-grid">
+  <div><b data-i18n="identifiedTitle">🛡️ Identified businesses</b><p data-i18n="identifiedText">We clearly distinguish UPA businesses from public directory listings.</p></div>
+  <div><b data-i18n="humanSupport">💬 Human support</b><p data-i18n="humanSupportText">Real people to help you through the process.</p></div>
+  <div><b data-i18n="yearsJoy">✨ 25+ years creating joy</b><p data-i18n="yearsJoyText">UPA's experience is now also in a marketplace.</p></div>
+</div></section>
+
+<footer><div class="wrap footer-grid">
+  <div><div class="brand"><span class="brand-main">UPA</span><span class="brand-sub">KIDS MARKET</span></div><p data-i18n="footerText">A new way to find everything your kids need.</p></div>
+  <div><b>UPA</b><a href="https://upaentertainment.com">UPA Entertainment</a><a href="https://upaevents.com">UPA Events</a><a href="https://babysittingupa.com">UPA Care</a></div>
+  <div><b>Legal</b></div>
+</div></footer>
+
 <script src="app.js"></script>
 </main>
 </body>
