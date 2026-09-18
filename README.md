@@ -4,8 +4,8 @@ Family marketplace by UPA Entertainment.
 
 ## Current launch model
 - Products + services
-- One-time seller registration: USD 5
-- UPA marketplace commission: 0%
+- Launch seller registration: USD 5 for 12 months
+- UPA marketplace commission during launch promotion: 0%
 - Stripe hosted checkout
 
 ## Stripe seller registration
