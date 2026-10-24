@@ -2,10 +2,12 @@
 
 Family marketplace by UPA Entertainment.
 
-## Current launch model
+## Current seller model
 - Products + services
-- Launch seller registration: USD 5 for 12 months
-- UPA marketplace commission during launch promotion: 0%
+- Seller listing: USD 5 for one listing for 12 months
+- UPA marketplace commission: 15% on applicable sales or reservations
+- Featured Category: USD 15 for 30 days
+- Featured Home: USD 35 for 30 days
 - Stripe hosted checkout
 
 ## Stripe seller registration
